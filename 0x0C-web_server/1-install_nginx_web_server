@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#Install nginx web server
+# Exit on any error
+set -e
+
+# Install nginx web server
+sudo apt-get -y update
+sudo apt-get -y install nginx
+
+# Create a simple HTML file with "Hello World!"
+sudo sh -c 'echo "Hello World!" > /var/www/html/index.nginx-debian.html'
+
+# Restart Nginx service to apply changes
+sudo service nginx restart
